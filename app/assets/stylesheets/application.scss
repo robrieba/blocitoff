@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.user-info {
+   margin: 9px;
+ }
+
+.height-full {
+ height: 100vh;
+}
+
+.jumbotron {
+    margin: 10%;
+    padding: 10%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
