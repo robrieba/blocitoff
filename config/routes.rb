@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'welcome#about'
 
-  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations'  }
+  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords' }
 
   root to: 'welcome#index'
 

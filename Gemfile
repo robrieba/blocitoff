@@ -15,6 +15,7 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+gem 'figaro', '1.0'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
