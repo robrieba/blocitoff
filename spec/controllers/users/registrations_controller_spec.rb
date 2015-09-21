@@ -4,6 +4,7 @@ RSpec.describe Users::RegistrationsController, type: :controller do
 
   let (:new_user_attributes) do
     {
+      username: "member",
       email: "member@exampl.com",
       password: "password",
       password_confirmation: "password"
@@ -54,5 +55,5 @@ RSpec.describe Users::RegistrationsController, type: :controller do
     end
   end
 
-  
+
 end

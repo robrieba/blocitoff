@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          # disabling for debugging purposes.
          #,:confirmable
+
+  validates :username, length: { minimum: 1, maximum: 100 }, presence: true
+
 end
