@@ -6,6 +6,9 @@
   <div class="col-md-4 well">
 
     <h2>Profile</h2>
+    <div class="form-group">
+      <%= image_tag User.avatar_url(current_user, 96), class: "gravatar profile-pic" %>
+    </div>
 
     <% if user_signed_in? %>
     <div class="form-group">
