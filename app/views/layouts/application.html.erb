@@ -9,20 +9,19 @@
 </head>
 <body>
 
-<div class="container-fluid welcome-background height-full">
+<div class="container-fixed welcome-background height-full">
   <ul class="nav nav-tabs">
     <div class="pull-right user-info">
       <% if user_signed_in? %>
         <%= current_user.email %> -
-        <%= link_to 'Edit profile', edit_user_registration_path  %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete  %>
+        <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-default btn-sm"  %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-default btn-sm"  %>
       <% else %>
-        <%= link_to "Sign Up", new_user_registration_path  %> or
-        <%= link_to "Sign In", new_user_session_path  %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-sm"  %> or
+        <%= link_to "Sign In", new_user_session_path, class: "btn btn-default btn-sm"  %>
       <% end %>
     </div>
   </ul>
-  <br />
 
   <%= yield %>
 

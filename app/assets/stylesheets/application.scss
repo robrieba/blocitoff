@@ -17,8 +17,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$glass_background: rgba(0, 0, 0, 0.6);
+
 .user-info {
    margin: 9px;
+ }
+
+ .nav {
+   color: white;
+   margin-bottom: 20px;
+   background-color: $glass_background;
  }
 
 .height-full {
@@ -27,10 +35,10 @@
 
 .jumbotron {
     color: white;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: $glass_background;
 }
 
 .well {
   color: white;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: $glass_background;
 }
