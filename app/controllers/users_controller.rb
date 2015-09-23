@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   before_action :require_sign_in
 
   def show
-    @user = User.find(params[:id])
-    @items = @user.items
+    @items = current_user.items
   end
 
 end
