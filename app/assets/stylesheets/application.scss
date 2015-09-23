@@ -19,24 +19,6 @@
 
 $glass_background: rgba(0, 0, 0, 0.6);
 
- .user-info {
-   margin: 9px;
- }
-
- .profile-pic {
-   border: solid;
-   border-width: 1px;
-   border-color: gray;
-   border-radius: 3px;
-   padding: 2px;
- }
-
- .nav {
-   color: white;
-   margin-bottom: 20px;
-   background-color: $glass_background;
- }
-
 .height-full {
  height: 100vh;
 }
@@ -44,6 +26,17 @@ $glass_background: rgba(0, 0, 0, 0.6);
 .jumbotron {
     color: white;
     background-color: $glass_background;
+    padding: 20px;
+}
+
+.navbar {
+  margin: 0px;
+}
+
+.profile-pic {
+  margin-top: 20px;
+  border-radius: 50%;
+
 }
 
 .well {

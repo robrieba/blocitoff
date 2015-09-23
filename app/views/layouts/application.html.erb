@@ -9,19 +9,25 @@
 </head>
 <body>
 
-<div class="container-fixed welcome-background height-full">
-  <ul class="nav nav-tabs">
-    <div class="pull-right user-info">
-      <% if user_signed_in? %>
-       <%= image_tag User.avatar_url(current_user, 24), class: "gravatar profile-pic" %>
-        <%= link_to current_user.email, user_path(current_user.id), class: "btn btn-default btn-sm"  %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-default btn-sm"  %>
-      <% else %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-sm"  %> or
-        <%= link_to "Sign In", new_user_session_path, class: "btn btn-default btn-sm"  %>
-      <% end %>
+<div class="container-fixed height-full">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to 'Blocitoff', root_path, class: 'navbar-brand' %>
+      </div>
+      <div id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.email, user_path(current_user.id) %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
-  </ul>
+  </nav>
 
   <%= yield %>
 

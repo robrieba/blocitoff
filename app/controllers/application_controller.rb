@@ -8,6 +8,13 @@ class ApplicationController < ActionController::Base
     user_path(resource)
   end
 
+  def require_sign_in
+    unless current_user
+      flash[:error] = "You must be logged in to do that"
+      redirect_to '/users/sign_in'
+    end
+  end
+
   protected
 
   def configure_permitted_parameters
