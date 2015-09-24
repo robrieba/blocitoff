@@ -7,13 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 user = User.create!(
-  username:     'Bob',
+  username: Faker::Name.name,
   email:    'bob@example.com',
   password: 'password'
 )
 
-i = 0
 10.times do
-  i += 1
-  Item.create!(user: user, name: "Task #{i}")
+  Item.create!(user: user, name: Faker::Lorem.sentence)
 end
