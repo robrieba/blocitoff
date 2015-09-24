@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    
     <div class="col-sm-9">
       <h3>Task List</h3>
       <table class="table table-hover table-striped">
@@ -22,7 +23,7 @@
         <%= render partial: 'items/form', locals: { user: current_user, item: Item.new } %>
       </div>
     </div>
-  
+
     <div class="col-sm-3">
       <h3><%= current_user.username %></h3>
       <%= image_tag User.gravatar_url(current_user, 100), class: "profile-pic" %>
@@ -34,4 +35,5 @@
         <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-success btn"  %>
       </div>
     </div>
+
   </div>

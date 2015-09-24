@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   def create
     @item = current_user.items.new(item_params)
     @new_item = Item.new
