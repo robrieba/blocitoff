@@ -1,1 +1,5 @@
-<tr><td><%= "#{item.name}" %></td></tr>
+<tr id="item-<%=item.id%>">
+  <td><%= "#{item.name}" %></td>
+  <td class="text-center">99</td>
+  <td class="text-center"><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
+</tr>

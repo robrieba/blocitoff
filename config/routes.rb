@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords' }
 
   resources :users, only: [:show]
-  resources :items, only: [:create]
+  resources :items, only: [:create, :destroy]
 
   root to: 'welcome#index'
 

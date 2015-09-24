@@ -14,10 +14,29 @@ class ItemsController < ApplicationController
 
   end
 
+  def destroy
+    @item = current_user.items.find(item_id)
+
+    if !@item.destroy
+      flash[:error] = "Comment cannot be delted."
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  end
+
   private
 
   def item_params
     params.require(:item).permit(:name)
   end
+
+  def item_id
+    params.require(:id)
+  end
+
 
 end
