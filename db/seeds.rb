@@ -13,5 +13,5 @@ user = User.create!(
 )
 
 10.times do
-  Item.create!(user: user, name: Faker::Lorem.sentence)
+  Item.create!(user: user, name: Faker::Lorem.sentence(2, false, 3))
 end
