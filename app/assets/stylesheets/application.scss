@@ -26,7 +26,8 @@ $glass_background: rgba(0, 0, 0, 0.6);
 .jumbotron {
   color: white;
   background-color: $glass_background;
-  padding: 20px;
+  padding: 5%;
+  margin-bottom: 0px;
 }
 
 .navbar {
@@ -45,4 +46,5 @@ $glass_background: rgba(0, 0, 0, 0.6);
 .well {
   color: white;
   background-color: $glass_background;
-}
+
+ }
